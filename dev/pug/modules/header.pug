@@ -1,0 +1,40 @@
+mixin header-top__item(title)
+  li.header-top__item
+    a(href="#")=title
+
+mixin header-menu__item(object)
+  a(href="#")=object
+    
+header
+  .header-top
+    .container
+      ul.header-top__list
+        for object in top__item
+          +header-top__item(object)
+      .header-phone
+          a(href="tel:+77754750088").header-phone__item +7 (775) 475-00-88
+          a(href="tel:+77017209499").header-phone__item +7 (701) 720-94-99
+      .header-user
+        .header-user__item
+          img(src="static/img/login.png", alt="Login")
+          span: a(href="#") Вход
+      
+        .header-user__item
+          img(src="static/img/signup.png", alt="Signup")
+          span: a(href="#") Регистрация
+  .header-bottom
+    .container
+      .header-logo
+        a(href="#"): img(src="static/img/logo.png", alt="logo")
+      ul.header-menu
+        for object in menu__item
+          li.header-menu__item
+            if (object === 'Каталог')
+              a(href="#") Каталог
+              include ../../static/img/down-arrow.svg
+            else  
+              +header-menu__item(object)
+      .header-menu__icon
+        a(href="#"): include ../../static/img/search.svg
+      .header-menu__icon 
+        a(href="#"): include ../../static/img/basket.svg

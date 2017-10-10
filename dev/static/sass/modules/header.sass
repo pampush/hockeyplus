@@ -1,0 +1,98 @@
+.header-top
+  padding: 23px 0 17px 0
+  .container
+    display: flex
+    justify-content: space-between
+
+.header-top__list
+  display: flex
+  justify-content: center
+
+.header-top__item
+  &:nth-of-type(n+2)
+    margin-left: 32px
+  a
+    color: #464646
+    font-size: rem(14)
+    font-weight: 400
+    &:hover
+      color: #ff9702
+      text-decoration: underline
+
+.header-phone
+
+.header-phone__item
+  color: #464646
+  font-size: rem(18)
+  &:nth-of-type(n+2)
+    margin-left: 23px
+
+.header-user
+  display: flex
+  justify-content: space-between
+
+.header-user__item
+  font-size: rem(14)
+  img
+    height: 18px
+    width: 15px
+    margin-right: 5px
+  &:first-child:after
+    margin: 0 5px
+    content: '/'
+    display: inline-block
+
+.header-bottom
+  background-color: #646665
+  padding: 11px 0 8px 0
+  border-bottom: 4px solid #ff9702
+  .container
+    display: flex
+    justify-content: space-between
+
+.header-logo
+  margin-right: 36px
+
+.header-menu
+  flex: 1
+  justify-content: space-between
+  display: flex
+  padding-top: 29px
+
+.header-menu__item
+  flex: 1
+  position: relative
+  text-align: center
+  a
+    text-transform: uppercase
+    color: #ff9702
+  svg
+    fill: #ff9702
+    width: 22px
+    height: 12px
+  &:hover
+    a
+      color: #FFF
+    svg
+      fill: #fff
+
+  &:hover:after
+    content: ''
+    display: block
+    height: 4px
+    width: 100%
+    background: #fff
+    position: absolute
+    bottom: -12px
+
+.header-menu__item
+
+
+.header-menu__icon
+  align-self: center
+  text-align: right
+  flex: 0 0 100px
+  svg
+    fill: (#fff)
+    height: 33px
+    width: 33px

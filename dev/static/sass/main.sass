@@ -1,4 +1,57 @@
+@import "fonts.sass"
+@import "vars.sass"
+@import "libs.sass"
+@import "utils.sass"
+
 html
-  background: grey
+  font-size: 16px
+
+body
+  font-family: $mainFont
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+
+ul,li
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+p
+  margin: 0
+
+a
+  text-decoration: none
+  color: black
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: middle
+
+textarea
+  resize: none
+
+section
+  position: relative
+
+input,
+select,
+button
+  outline: none
+
+*, *:before, *:after
+  box-sizing: border-box
+
+.container
+  position: relative
+  width: 100%
+  max-width: 1360px
+  margin: 0 auto
+
 @import "modules/header.sass"
 @import "modules/footer.sass"
