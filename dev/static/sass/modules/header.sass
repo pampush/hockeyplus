@@ -1,28 +1,37 @@
-.header-top
-  padding: 23px 0 17px 0
+header
   .container
     display: flex
     justify-content: space-between
 
+.header-top
+  padding: 17px 0 13px 0
+  background: #fff
+  @media screen and (max-width: $tabletWidth)
+    display: none
+  .container
+    align-items: baseline
 .header-top__list
-  display: flex
-  justify-content: center
+
+  //justify-content: center
 
 .header-top__item
-  &:nth-of-type(n+2)
-    margin-left: 32px
+  display: inline-block
+  margin-left: 32px
+  &:first-child
+    margin-left: 0
   a
-    color: #464646
+    color: $text-color
     font-size: rem(14)
     font-weight: 400
     &:hover
-      color: #ff9702
+      color: $orange
       text-decoration: underline
 
 .header-phone
 
 .header-phone__item
-  color: #464646
+  display: inline-block
+  color: $text-color
   font-size: rem(18)
   &:nth-of-type(n+2)
     margin-left: 23px
@@ -42,32 +51,47 @@
     content: '/'
     display: inline-block
 
+.header-top__mob
+  display: none
+  background: #fff
+  @media screen and (max-width: $tabletWidth)
+    display: flex
+    justify-content: space-between
+    .header-top__icon svg
+      fill: (#000)
+      height: 33px
+      width: 33px
+
 .header-bottom
   background-color: #646665
   padding: 11px 0 8px 0
-  border-bottom: 4px solid #ff9702
-  .container
-    display: flex
-    justify-content: space-between
+  border-bottom: 4px solid $orange
 
 .header-logo
   margin-right: 36px
+  @media screen and (max-width: $tabletWidth)
+    margin: auto
 
 .header-menu
   flex: 1
   justify-content: space-between
   display: flex
   padding-top: 29px
+  @media screen and (max-width: $tabletWidth)
+    display: none
 
 .header-menu__item
-  flex: 1
+  //flex: 1
+  //margin-left: 10px
   position: relative
   text-align: center
+  &:first-child
+    margin-left: 0
   a
     text-transform: uppercase
-    color: #ff9702
+    color: $orange
   svg
-    fill: #ff9702
+    fill: $orange
     width: 22px
     height: 12px
   &:hover
@@ -75,7 +99,6 @@
       color: #FFF
     svg
       fill: #fff
-
   &:hover:after
     content: ''
     display: block
@@ -85,14 +108,14 @@
     position: absolute
     bottom: -12px
 
-.header-menu__item
-
-
 .header-menu__icon
   align-self: center
   text-align: right
-  flex: 0 0 100px
+  margin-left: 75px
+
   svg
     fill: (#fff)
     height: 33px
     width: 33px
+  @media screen and (max-width: $tabletWidth)
+    display: none

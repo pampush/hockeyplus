@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     pug = require('gulp-pug');
     chmod = require('gulp-chmod');  // ??
-
+    autoprefixer = require('gulp-autoprefixer');
 gulp.task('clean', () => {
   return del([
     './build/**/*.*', './build/**'
@@ -22,6 +22,9 @@ gulp.task('sass', () => { /* signal async completion issue */
         message: error.message
       };
     }))
+    .pipe(autoprefixer({
+      browsers: ['last 3 version'],
+      cascade: false}))
     .pipe(gulp.dest('./build/static/css/'))
     .pipe(browserSync.stream());
     /*.pipe(browserSync.reload({

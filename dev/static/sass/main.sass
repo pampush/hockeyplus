@@ -32,6 +32,7 @@ img,
 svg,
 video
   vertical-align: middle
+  width: 100%
 
 textarea
   resize: none
@@ -50,8 +51,17 @@ button
 .container
   position: relative
   width: 100%
-  max-width: 1360px
+  width: $desktopWidth
   margin: 0 auto
 
+  @media screen and (max-width: $desktopWidth)
+    width: $smallDesktopWidth
+  @media screen and (max-width: $smallDesktopWidth)
+    width: $tabletWidth
+  @media screen and (max-width: $tabletWidth)
+    width: $bigPhoneWidth
+  @media screen and (max-width: $bigPhoneWidth)
+    width: $smallPhoneWidth
 @import "modules/header.sass"
 @import "modules/footer.sass"
+@import "pages/index.sass"
